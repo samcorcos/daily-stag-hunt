@@ -1,0 +1,25 @@
+@import "bourbon/bourbon";
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+$font-stack: 'Open Sans', sans-serif;
+
+body {
+  font-family: $font-stack;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+/* @each \$classname in <image and class name list> {
+  .#{\$classname}-background {
+    background: url(/background/#{\$classname}.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 92vh;
+    width: 100%;
+    position: relative;
+  }
+} */
