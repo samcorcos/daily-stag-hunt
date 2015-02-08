@@ -1,7 +1,77 @@
 <template name="home">
-	<div class="container">
-		<div class="ads hidden-xs hidden-sm">
-			<h2>Adverts</h2>
+	<div class="row">
+
+		<div class="col-sm-12 col-md-8 col-lg-9">
+			{{> _featured}}
+			{{> _allPosts}}
+		</div>
+
+		<div class="hidden-xs hidden-sm col-md-4 col-lg-3">
+			<div class="ads">
+				<h2>Adverts</h2>
+			</div>
 		</div>
 	</div>
+</template>
+
+
+<template name="_featured">
+	<div class="row featured-row">
+		<div class="col-xs-12 col-sm-4">
+			<div style="background-color:#ccc;height:20rem;width:100%;">
+				<h2>image</h2>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-8">
+			<h3>Headline goes here</h3>
+			<p>Street art photo booth Carles, hella typewriter artisan letterpress viral slow-carb cliche paleo 90's High Life literally. Lumbersexual migas gastropub, sriracha tofu cray crucifix salvia XOXO mlkshk banh mi Tumblr mixtape selvage. Ugh Wes Anderson Marfa, Tumblr farm-to-table gentrify PBR XOXO YOLO Banksy selfies. Post-ironic drinking vinegar plaid food truck ethical single-origin coffee, forage viral gastropub cornhole aesthetic Austin Carles. Bicycle rights Portland semiotics forage. American Apparel pop-up flexitarian meggings, before they sold out pickled fanny pack drinking vinegar pour-over four loko narwhal. Yr beard tattooed literally.</p>
+		</div>
+	</div>
+</template>
+
+
+<template name="_allPosts">
+	<div class="row posts-row">
+		<hr>
+		<div class="col-xs-12 col-sm-4 posts-column column-one">
+			{{> _columnOne}}
+		</div>
+		<div class="col-xs-12 col-sm-4 posts-column column-two">
+			{{> _columnTwo}}
+		</div>
+		<div class="col-xs-12 col-sm-4 posts-column column-three">
+			{{> _columnOne}} <!-- TODO this will eventually be _columnThree -->
+		</div>
+	</div>
+</template>
+
+
+
+<template name="_columnOne">
+	<!-- TODO this will eventually be an #each loop with a 1/3 index filter -->
+	<!-- image first, content second -->
+	<img src="/pic.png" alt="">
+	<h4><a href="">This is the title of the first article</a></h4>
+	<p>This is the basic content... It should have a filter based on the number of words... How hard can it be?</p>
+	<hr>
+
+	<img src="/pic.png" alt="">
+	<h4><a href="">This is the title of the first article</a></h4>
+	<p>This is the basic content... It should have a filter based on the number of words... How hard can it be?</p>
+	<hr>
+
+</template>
+
+<template name="_columnTwo">
+
+	<h4><a href="">This is the title of the first article</a></h4>
+	<p>This is the basic content... It should have a filter based on the number of words... How hard can it be?</p>
+	<img src="/pic.png" alt="">
+	<hr>
+
+	<h4><a href="">This is the title of the first article</a></h4>
+	<p>This is the basic content... It should have a filter based on the number of words... How hard can it be?</p>
+	<img src="/pic.png" alt="">
+	<hr>
+
 </template>

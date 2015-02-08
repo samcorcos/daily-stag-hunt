@@ -2,17 +2,19 @@
   /* margin: 15px; */
 }
 
-.navbar-brand {
-  font: 400 2em $font-title;
-  color: black;
-}
-
 .navleft {
-  font: 400 1em $font-title;
+  font: 400 2em $font-title;
   float: left;
   width: 25%;
   text-align: left;
   height: 7rem;
+  a {
+    color: black;
+    &:hover {
+      color: lighten(#000, 40%);
+      text-decoration: none;
+    }
+  }
 }
 
 .navcenter {
