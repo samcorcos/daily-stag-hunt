@@ -8,16 +8,18 @@
 }
 
 .navleft {
+  font: 400 1em $font-title;
   float: left;
-  width:33.33333%;
-  text-align:left;
+  width: 25%;
+  text-align: left;
   height: 7rem;
 }
 
 .navcenter {
+  font-size: 1.3em;
   float: left;
-  width:33.33333%;
-  text-align:center;
+  width: 50%;
+  text-align: center;
   height: 7rem;
   ul {
     margin: 0;
@@ -28,6 +30,10 @@
       a {
         text-decoration: none;
         padding: .2em 1em;
+        color: black;
+        &:hover {
+          color: lighten(#000, 40%);
+        }
       }
     }
   }
@@ -35,7 +41,7 @@
 
 .navright {
  float: left;
- width: 33.33333%;
+ width: 25%;
  text-align: right;
  height: 7rem;
 }
