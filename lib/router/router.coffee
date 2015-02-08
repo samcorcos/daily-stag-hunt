@@ -4,7 +4,7 @@ Router.configure
   loadingTemplate: "loading"
 
 Router.map ->
-  
+
   @route "home",
     path: "/"
     controller: "HomeController"
@@ -12,5 +12,8 @@ Router.map ->
   @route "about",
     path: "/about"
     controller: "AboutController"
+
+  @route "admin",
+    path: "/admin"
 
   return

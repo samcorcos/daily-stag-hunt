@@ -1,0 +1,41 @@
+.navbar {
+  /* margin: 15px; */
+}
+
+.navbar-brand {
+  font: 400 2em $font-title;
+  color: black;
+}
+
+.navleft {
+  float: left;
+  width:33.33333%;
+  text-align:left;
+  height: 7rem;
+}
+
+.navcenter {
+  float: left;
+  width:33.33333%;
+  text-align:center;
+  height: 7rem;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    li {
+      display: inline;
+      a {
+        text-decoration: none;
+        padding: .2em 1em;
+      }
+    }
+  }
+}
+
+.navright {
+ float: left;
+ width: 33.33333%;
+ text-align: right;
+ height: 7rem;
+}

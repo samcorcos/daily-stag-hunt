@@ -1,11 +1,17 @@
 @import "bourbon/bourbon";
-@import "frame";
+
+@import url(http://fonts.googleapis.com/css?family=Lobster+Two);
+$font-title: 'Lobster Two', cursive;
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
 $font-stack: 'Open Sans', sans-serif;
 
+@import "frame";
+@import "navbar";
+
 body {
   font-family: $font-stack;
+  margin: 15px;
 }
 
 h1, h2, h3, h4, p {
@@ -24,3 +30,13 @@ h1, h2, h3, h4, p {
     position: relative;
   }
 } */
+
+.valign-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .valign {
+    display: block;
+  }
+}
