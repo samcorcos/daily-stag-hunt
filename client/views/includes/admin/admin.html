@@ -1,4 +1,33 @@
 <template name="admin">
+
+  {{#if isAdmin}}
+
+    {{> newPost}}
+
+  {{else}}
+    <div class="login-buttons">
+      {{> loginButtons}}
+    </div>
+    <div style="height: 90vh;"></div>
+  {{/if}}
+</template>
+
+
+<!-- <template name='loginForm'>
+  <div class="container">
+    <div class="row">
+      <div class="col s6">
+        <input type="text" id="username">
+      </div>
+      <div class="col s6">
+        <input type="password" id="password" class="login-password">
+      </div>
+    </div>
+  </div>
+</template> -->
+
+
+<template name="newPost">
   <div class="container">
     <div id="summernote">Hello Summernote</div>
     <!-- This is where categories go -->
