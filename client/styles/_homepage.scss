@@ -6,6 +6,23 @@
 
 .featured-row {
   margin: 2rem;
+  h3 {
+    font-size: 3em;
+    a {
+      color: black;
+      &:hover {
+        color: lighten(black, 40%);
+      }
+    }
+  }
+  .subtitle {
+    color: #777;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
+  p {
+    font-size: 1.3em;
+  }
 }
 
 .posts-row {
