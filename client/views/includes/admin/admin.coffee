@@ -24,21 +24,23 @@ Template.newPost.events
     sHTML = $('#summernote').code()
     title = t.find('#title').value
     subtitle = t.find('#subtitle').value unless t.find('#subtitle').value is ""
-    featured = if t.find('#featured').value is true then true else false
+    featured = if $('#featured').is(':checked') is true then true else false
     date = new Date()
+    description = t.find('#description').value
     category = undefined
     image = Session.get 'image'
 
-    if t.find('#biggie').value is true
+    if $('#biggie').is(':checked') is true
       category = 'biggie'
-    else if t.find('#inquiry').value is true
+    else if $('#inquiry').is(':checked') is true
       category = 'inquiry'
-    else if t.find('#advice').value is true
+    else if $('#advice').is(':checked') is true
       category = 'advice'
 
     Posts.insert
       title: title
       subtitle: subtitle
+      description: description
       content: sHTML
       date: new Date()
       featured: featured

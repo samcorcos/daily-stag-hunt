@@ -21,18 +21,18 @@
 
 
 <template name="_featured">
+	{{#with featured}}
 	<div class="row featured-row">
 		<div class="col-xs-12 col-sm-4">
-			{{featured}}
-			<div style="background-color:#ccc;height:20rem;width:100%;">
-				<h2>image</h2>
-			</div>
+			<img src="{{image}}" alt="" style="width:100%;">
 		</div>
 		<div class="col-xs-12 col-sm-8">
-			<h3>Headline goes here</h3>
-			<p>Street art photo booth Carles, hella typewriter artisan letterpress viral slow-carb cliche paleo 90's High Life literally. Lumbersexual migas gastropub, sriracha tofu cray crucifix salvia XOXO mlkshk banh mi Tumblr mixtape selvage. Ugh Wes Anderson Marfa, Tumblr farm-to-table gentrify PBR XOXO YOLO Banksy selfies. Post-ironic drinking vinegar plaid food truck ethical single-origin coffee, forage viral gastropub cornhole aesthetic Austin Carles. Bicycle rights Portland semiotics forage. American Apparel pop-up flexitarian meggings, before they sold out pickled fanny pack drinking vinegar pour-over four loko narwhal. Yr beard tattooed literally.</p>
+			<h3>{{title}}</h3>
+			<p class="subtitle">{{subtitle}}</p>
+			{{{featuredFilter description}}}
 		</div>
 	</div>
+	{{/with}}
 </template>
 
 

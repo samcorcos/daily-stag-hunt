@@ -13,7 +13,9 @@
     return
 
   waitOn: ->
-    []
+    [
+      Meteor.subscribe "posts"
+    ]
 
   data: ->
     params: @params or {}
