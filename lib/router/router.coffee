@@ -19,4 +19,7 @@ Router.map ->
   @route "biggie",
     path: "/biggie"
 
+  @route "inquiry",
+    path: "/inquiry"
+
   return
