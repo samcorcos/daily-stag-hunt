@@ -1,7 +1,9 @@
 Template.admin.rendered = ->
-  $('#summernote').summernote()
   this.$('[data-toggle="dropdown"]').dropdown()
 
+
+Template.newPost.rendered = ->
+  $('#summernote').summernote()
 
 Template.newPost.events
   'click #submit': (e,t) ->
@@ -12,10 +14,9 @@ Template.newPost.events
     titlePattern = ///(<h2>)(.+)(</h2>)///
     title = sHTML.match(titlePattern)[2]
 
-    Posts.insert
-      title: title
-      content: sHTML
-      date: new Date()
-      status: "pending"
+    # Posts.insert
+    #   title: title
+    #   content: sHTML
+    #   date: new Date()
 
     alert "Successfully created new post!"

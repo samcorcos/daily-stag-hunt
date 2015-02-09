@@ -13,22 +13,54 @@
 </template>
 
 
-<!-- <template name='loginForm'>
-  <div class="container">
-    <div class="row">
-      <div class="col s6">
-        <input type="text" id="username">
-      </div>
-      <div class="col s6">
-        <input type="password" id="password" class="login-password">
-      </div>
-    </div>
-  </div>
-</template> -->
-
 
 <template name="newPost">
-  <div class="container">
+  <div class="container new-post-container">
+    <h2>New Post</h2>
+    <div class="jumbotron">
+      <h3>Styling Rules</h3>
+      <ol>
+        <li>The "magic wand" in the top left is how you change format.</li>
+        <li>Articles should not contain "Header 1" or "Header 2".</li>
+        <li>Do not include the document title in the body: enter it in the input box above the body.</li>
+        <li>All articles must have at least one category.</li>
+        <li>Images should be in a "thumbnail".</li>
+      </ol>
+    </div>
+    <form>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <div class="form-group">
+            <label for="title">Article Title</label>
+            <input type="text" class="form-control" id="title" placeholder="Title">
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <div class="form-group">
+            <label for="subtitle">Subtitle (optional)</label>
+            <input type="text" class="form-control" id="subtitle" placeholder="Subtitle (optional)">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12" style="text-align:center;">
+          <div class="form-group">
+            <label class="category-checkbox">
+              <input type="checkbox"> Dear Mr. Biggie
+            </label>
+            <label class="category-checkbox">
+              <input type="checkbox"> Inquiry
+            </label>
+            <label class="category-checkbox">
+              <input type="checkbox"> Unsolicited Advice
+            </label>
+            <label class="category-checkbox">
+              <input type="checkbox"> <b>Featured</b>
+            </label>
+          </div>
+        </div>
+      </div>
+    </form>
     <div id="summernote">Hello Summernote</div>
     <!-- This is where categories go -->
     <button id="submit" class="btn btn-primary">Submit</button>

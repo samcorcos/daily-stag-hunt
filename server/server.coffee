@@ -17,3 +17,7 @@ if Meteor.users.find().count() is 0
     password: "akinpassword"
     profile:
       roles: ["admin"]
+
+
+Accounts.config
+  forbidClientAccountCreation : true
