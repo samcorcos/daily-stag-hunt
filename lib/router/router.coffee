@@ -16,10 +16,19 @@ Router.map ->
   @route "admin",
     path: "/admin"
 
-  @route "biggie",
+  @route "biggieLanding",
     path: "/biggie"
 
-  @route "inquiry",
+  @route "inquiryLanding",
     path: "/inquiry"
+
+  @route "inquiryPost",
+    path: "inquiry/:_id"
+    data: ->
+      Posts.findOne @params._id
+    waitOn: ->
+      [
+        Meteor.subscribe "posts"
+      ]
 
   return
