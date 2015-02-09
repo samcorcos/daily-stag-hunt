@@ -16,4 +16,7 @@ Router.map ->
   @route "admin",
     path: "/admin"
 
+  @route "biggie",
+    path: "/biggie"
+
   return
