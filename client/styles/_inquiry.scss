@@ -4,6 +4,14 @@
     width: 100%;
     max-height: 15rem;
   }
+  h4 {
+    a {
+      color: black;
+      &:hover {
+        color: lighten(black, 40%);
+      }
+    }
+  }
 }
 
 .login-buttons {
