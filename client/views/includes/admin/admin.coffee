@@ -5,7 +5,19 @@ Template.admin.rendered = ->
 Template.newPost.rendered = ->
   $('#summernote').summernote()
 
+Template.newPost.helpers
+  tempImage: ->
+    Session.get "image"
+
+
 Template.newPost.events
+  'click #image': (e,t) ->
+    e.preventDefault()
+    # filepicker.setKey "A5GNMAn95SgWSLlOY0FYaz"
+    filepicker.pick (Blob) ->
+      console.log Blob.url
+      Session.set 'image', Blob.url
+
   'click #submit': (e,t) ->
     e.preventDefault()
 
@@ -15,6 +27,7 @@ Template.newPost.events
     featured = if t.find('#featured').value is true then true else false
     date = new Date()
     category = undefined
+    image = Session.get 'image'
 
     if t.find('#biggie').value is true
       category = 'biggie'
@@ -30,6 +43,7 @@ Template.newPost.events
       date: new Date()
       featured: featured
       category: category
+      image: image
 
 
     alert "Successfully created new post!"

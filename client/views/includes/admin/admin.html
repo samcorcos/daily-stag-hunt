@@ -24,7 +24,8 @@
         <li>Articles should not contain "Header 1" or "Header 2".</li>
         <li>Do not include the document title in the body: enter it in the input box above the body.</li>
         <li>All articles must have at least one category.</li>
-        <li>Images should be in a "thumbnail".</li>
+        <li>Images within the body should be in a "thumbnail".</li>
+        <li>All articles must have a "featured" image for the thumbnail.</li>
       </ol>
     </div>
     <form>
@@ -40,6 +41,14 @@
             <label for="subtitle">Subtitle (optional)</label>
             <input type="text" class="form-control" id="subtitle" placeholder="Subtitle (optional)">
           </div>
+        </div>
+      </div>
+      <div class="row valign-wrapper">
+        <div class="col-xs-12 col-sm-6">
+          <img src="{{tempImage}}" alt="" class="filepicker-image">
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <button class="btn btn-primary btn-lg" id="image">Add Featured Image</button>
         </div>
       </div>
       <div class="row">
