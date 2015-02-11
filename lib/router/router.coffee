@@ -22,8 +22,26 @@ Router.map ->
   @route "inquiryLanding",
     path: "/inquiry"
 
-  @route "inquiryPost",
+  @route "inquiry",
     path: "inquiry/:_id"
+    data: ->
+      Posts.findOne @params._id
+    waitOn: ->
+      [
+        Meteor.subscribe "posts"
+      ]
+
+  @route "biggie",
+    path: "biggie/:_id"
+    data: ->
+      Posts.findOne @params._id
+    waitOn: ->
+      [
+        Meteor.subscribe "posts"
+      ]
+
+  @route "advice",
+    path: "advice/:_id"
     data: ->
       Posts.findOne @params._id
     waitOn: ->
