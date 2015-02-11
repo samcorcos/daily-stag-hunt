@@ -3,7 +3,7 @@
   yieldTemplates: {}
 
   onBeforeAction: ->
-    loadFilePicker('A5GNMAn95SgWSLlOY0FYaz');
+    loadFilePicker('A5GNMAn95SgWSLlOY0FYaz')
 
     @next()
     return

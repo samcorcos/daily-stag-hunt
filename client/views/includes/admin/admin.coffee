@@ -1,5 +1,7 @@
 Template.admin.rendered = ->
-  this.$('[data-toggle="dropdown"]').dropdown()
+  Meteor.setTimeout ->
+    this.$('[data-toggle="dropdown"]').dropdown()
+  , 300
 
 
 Template.newPost.rendered = ->
