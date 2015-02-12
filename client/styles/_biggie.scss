@@ -1,10 +1,24 @@
 .biggie-title {
   text-align: left;
   margin-left: 5%;
+  a {
+    color: #333;
+    text-decoration: none;
+    &:hover {
+      color: lighten(black, 40%);
+    }
+  }
 }
 
 .biggie-letter {
   margin: 2rem 5%;
+  a {
+    color: #333;
+    text-decoration: none;
+    &:hover {
+      color: lighten(black, 40%);
+    }
+  }
 }
 
 .biggie-section {
@@ -12,13 +26,28 @@
   background-color: #ccc;
   margin: 0 10%;
   border-radius: 5px;
+  a {
+    color: #333;
+    text-decoration: none;
+    &:hover {
+      color: lighten(black, 40%);
+    }
+  }
 }
 
 .biggie-content {
   margin: 0 10%;
+  margin-bottom: 5rem;
   h2 {
     text-align: left;
     padding: 2rem 0 2rem 1rem;
+    a {
+      color: #333;
+      text-decoration: none;
+      &:hover {
+        color: lighten(black, 40%);
+      }
+    }
   }
   p {
     font-size: 18px;

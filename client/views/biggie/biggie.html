@@ -1,3 +1,28 @@
 <template name="biggie">
-  {{content}}
+  <div class="row">
+    <div class="col-sm-12 col-md-8 col-lg-9">
+      <div class="biggie-section">
+        <div class="biggie-title">
+          <h2><a href="{{pathFor 'biggie'}}">Dear Mr. Biggie,</a></h2>
+        </div>
+        <div class="biggie-letter">
+          <blockquote>
+            <p><a href="{{pathFor 'biggie'}}">{{letter}}</a></p>
+            <footer><a href="{{pathFor 'biggie'}}">{{attribution}}</a></footer>
+          </blockquote>
+        </div>
+      </div>
+
+      <div class="biggie-content">
+        <h2><a href="{{pathFor 'biggie'}}">Dear Sir,</a></h2>
+        {{{content}}}
+      </div>
+
+    </div>
+
+    <div class="hidden-xs hidden-sm col-md-4 col-lg-3">
+      {{> adverts}}
+    </div>
+
+  </div>
 </template>
