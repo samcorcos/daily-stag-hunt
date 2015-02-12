@@ -1,9 +1,11 @@
 <template name="inquiryLanding">
   <div class="row">
-
     <div class="col-sm-12 col-md-8 col-lg-9">
-      {{> _inquiryRows}}
-
+      {{#each inquiryPost}}
+      <ul>
+        {{> _inquiryRows}}
+      </ul>
+      {{/each}}
     </div>
 
     <div class="hidden-xs hidden-sm col-md-4 col-lg-3">
@@ -14,60 +16,18 @@
 
 
 <template name="_inquiryRows">
-  <ul>
-    <li class="inquiry-row">
-      <div class="row valign-wrapper">
-        <div class="col-sm-3">
-          <img src="/pic.png" alt="">
-        </div>
-        <div class="col-sm-3">
-          <h4><a href="">Title of the article</a></h4>
-        </div>
-        <div class="col-sm-3">
-          <span>Date of article</span>
-        </div>
-        <div class="col-sm-3">
-          <span>something else?</span>
-        </div>
+  <li class="inquiry-row">
+    <div class="row valign-wrapper">
+      <div class="col-sm-3">
+        <img src="/pic.png" alt="">
       </div>
-      <hr>
-    </li>
-
-    <li class="inquiry-row">
-      <div class="row valign-wrapper">
-        <div class="col-sm-3">
-          <img src="/pic.png" alt="">
-        </div>
-        <div class="col-sm-3">
-          <span><a href="">Title of the article</a></span>
-        </div>
-        <div class="col-sm-3">
-          <span>Date of article</span>
-        </div>
-        <div class="col-sm-3">
-          <span>something else?</span>
-        </div>
+      <div class="col-sm-6">
+        <h4><a href="{{pathFor 'inquiry'}}">{{title}}</a></h4>
       </div>
-      <hr>
-    </li>
-
-    <li class="inquiry-row">
-      <div class="row valign-wrapper">
-        <div class="col-sm-3">
-          <img src="/pic.png" alt="">
-        </div>
-        <div class="col-sm-3">
-          <span><a href="">Title of the article</a></span>
-        </div>
-        <div class="col-sm-3">
-          <span>Date of article</span>
-        </div>
-        <div class="col-sm-3">
-          <span>something else?</span>
-        </div>
+      <div class="col-sm-3">
+        <span>{{formatDate date}}</span>
       </div>
-      <hr>
+    </div>
+    <hr>
     </li>
-
-  </ul>
 </template>
