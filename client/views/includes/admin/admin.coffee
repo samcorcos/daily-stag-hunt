@@ -2,6 +2,7 @@ Template.admin.rendered = ->
   Meteor.setTimeout ->
     this.$('[data-toggle="dropdown"]').dropdown()
   , 300
+  Session.set 'dearBiggie', false
 
 
 Template.newPost.rendered = ->
@@ -11,6 +12,9 @@ Template.newPost.helpers
   tempImage: ->
     Session.get "image"
 
+  dearBiggie: ->
+    Session.get "dearBiggie"
+
 
 Template.newPost.events
   'click #image': (e,t) ->
@@ -19,6 +23,10 @@ Template.newPost.events
     filepicker.pick (Blob) ->
       console.log Blob.url
       Session.set 'image', Blob.url
+
+  'click #dear-biggie': (e,t) ->
+    e.preventDefault()
+    Session.set 'dearBiggie', true
 
   'click #submit': (e,t) ->
     e.preventDefault()
@@ -48,6 +56,5 @@ Template.newPost.events
       featured: featured
       category: category
       image: image
-
 
     alert "Successfully created new post!"

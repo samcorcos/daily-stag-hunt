@@ -31,23 +31,35 @@
     </div>
     <form>
       <div class="row">
-        <div class="col-xs-12 col-sm-6">
+        <div class="col-xs-12 col-sm-5">
           <div class="form-group">
-            <label for="title">Article Title</label>
             <input type="text" class="form-control" id="title" placeholder="Title">
           </div>
         </div>
-        <div class="col-xs-12 col-sm-6">
+        <div class="col-xs-12 col-sm-5">
           <div class="form-group">
-            <label for="subtitle">Subtitle (optional)</label>
             <input type="text" class="form-control" id="subtitle" placeholder="Subtitle (optional)">
           </div>
         </div>
+        <div class="col-xs-12 col-sm-2">
+          <button class="btn btn-primary" id="dear-biggie" style="margin-top:0rem;">Dear Biggie?</button>
+        </div>
       </div>
+      {{#if dearBiggie}}
+      <div class="row" style="margin-bottom:1.5rem;">
+        <div class="form-group">
+          <div class="col-xs-12 col-sm-6">
+            <input type="text" id="letter" class="form-control" placeholder="Letter">
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <input type="text" id="attribution" class="form-control" placeholder="Attribution">
+          </div>
+        </div>
+      </div>
+      {{/if}}
       <div class="row">
         <div class="col-xs-12">
-          <label for="description">Description</label>
-          <textarea name="" id="description" style="width:100%;"></textarea>
+          <textarea placeholder="Description" id="description" style="width:100%;"></textarea>
         </div>
       </div>
       <div class="row valign-wrapper">
