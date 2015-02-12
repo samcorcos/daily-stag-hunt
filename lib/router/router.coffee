@@ -22,6 +22,9 @@ Router.map ->
   @route "inquiryLanding",
     path: "/inquiry"
 
+  @route 'adviceLanding',
+    path: '/advice'
+
   @route "inquiry",
     path: "inquiry/:_id"
     data: ->

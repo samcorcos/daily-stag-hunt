@@ -39,6 +39,8 @@ Template.newPost.events
     description = t.find('#description').value
     category = undefined
     image = Session.get 'image'
+    letter = if t.find('#letter') then t.find('#letter').value else false
+    attribution = if t.find('#attribution') then t.find('#attribution').value else false
 
     if $('#biggie').is(':checked') is true
       category = 'biggie'
@@ -56,5 +58,7 @@ Template.newPost.events
       featured: featured
       category: category
       image: image
+      letter: letter
+      attribution: attribution
 
     alert "Successfully created new post!"
